@@ -23,7 +23,7 @@ const loginUser = async (req, res) => {
     res.json({ success: true, token });
   } catch (error) {
     console.log(error);
-    res.json({ success: false, message: "Error" });
+    res.status(500).json({ success: false, message: "Internal Server Error" });
   }
 };
 
@@ -43,11 +43,11 @@ const registerUser = async (req, res) => {
 
     // validating email format and password
     if (!validator.isEmail(email)) {
-      return res.json({ success: false, message: "Please enter a valid email" });
+      return res.status(400).json({ success: false, message: "Please enter a valid email" });
     }
 
     if (password.length < 8) {
-      return res.json({ success: false, message: "Please enter a strong password" });
+      return res.status(400).json({ success: false, message: "Please enter a strong password" });
     }
 
     // hashing user password
@@ -62,10 +62,10 @@ const registerUser = async (req, res) => {
 
     const user = await newUser.save();
     const token = createToken(user._id);
-    res.json({ success: true, token });
+    res.status(201).json({ success: true, token });
   } catch (error) {
     console.log(error);
-    res.json({ success: false, message: "Error" });
+    res.status(500).json({ success: false, message: "Internal Server Error" });
   }
 };
 
