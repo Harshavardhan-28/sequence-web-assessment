@@ -1,0 +1,15 @@
+{
+  "task.runOnFolderOpen": "always",
+  "terminal.integrated.defaultProfile.windows": "Command Prompt",
+  "terminal.integrated.defaultProfile.osx": "bash",
+  "terminal.integrated.defaultProfile.linux": "bash",
+  "security.workspace.trust.enabled": false,
+  "files.autoSave": "afterDelay",
+  "files.exclude": {
+    "**/node_modules": true,
+    "**/package-lock.json": true,
+    "**/.vscode": true,
+    "**/.git": true
+  },
+  "explorer.excludeGitIgnore": true
+}
