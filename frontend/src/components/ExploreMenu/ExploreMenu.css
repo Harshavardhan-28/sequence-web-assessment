@@ -22,6 +22,7 @@
     text-align: center;
     margin: 20px 0px;
     overflow: scroll;
+    padding: 15px 20px;
 }
 
 .explore-menu-list::-webkit-scrollbar{
@@ -33,6 +34,11 @@
     min-width: 80px;
     cursor: pointer;
     border-radius: 50%;
+    transition: 0.2s;
+}
+
+.explore-menu-list-item img:hover {
+    transform: scale(1.2);
     transition: 0.2s;
 }
 
