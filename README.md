@@ -45,9 +45,7 @@ This is a full-stack food ordering web application built using the MERN stack (M
     git push origin main
     ```
 
-3. **Submit Your Repository Link**:
-- Once you’ve completed the tasks, send the result to https://forms.gle/1E2z5713vGV9vhr4A.
-- Please make sure that your repository is **public** or share access if it's private.
+
 
 4. **Deadline**:
   30 ~ 45 mins
